@@ -3,7 +3,7 @@ from decimal import Decimal
 # Create your models here.
 class Domiciliario(models.Model):
 
-    x_domiciliario = models.IntegerField(default=None)#esta no se está registrando ni idea por queeeeee jajaj
+    x_domiciliario = models.IntegerField(default=None)
     y_domiciliario = models.IntegerField()
     x_pedido = models.IntegerField()
     y_pedido = models.IntegerField()
