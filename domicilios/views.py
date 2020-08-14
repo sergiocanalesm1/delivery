@@ -13,6 +13,12 @@ def lista(request):
     serializer = DomiciliarioSerializer(todos, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def dar_domicilio_por_id(request,pk):
+    encontrado = Domiciliario.objects.get(id=pk)
+    serializer = DomiciliarioSerializer(encontrado)
+    return Response(serializer.data)
+
 @api_view(['POST'])
 def crear(request):
     serializer = DomiciliarioSerializer(data=request.data)
